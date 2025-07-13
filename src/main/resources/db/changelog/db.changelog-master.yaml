@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-schema
+      author: ffracas
+      changes:
+        - sqlFile:
+            path: db/changelog/changelog-001-schema.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+
+  - changeSet:
+      id: 002-insert-initial-data
+      author: ffracas
+      changes:
+        - sqlFile:
+            path: db/changelog/changelog-002-data.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
